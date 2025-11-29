@@ -12,17 +12,6 @@
 </head>
 
 <body>
-  <!-- video -->
-
- <section id="video" class="video-section">
-  <h2>My Video</h2>
-  <video controls class="my-video">
-    <source src="../images/hacker.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-</section>
-
-
   <!-- NAVBAR -->
   <nav class="navbar">
     <div class="nav-inner">
@@ -37,17 +26,25 @@
   </nav>
 
   <!-- HERO SECTION -->
-  <section id="home" class="hero">
-    <div class="hero-left">
-      <h1>Hello, I'm <span class="highlight">Bhabishya Regmi</span></h1>
-      <p>Footballer • Cybersecurity Student • Future Cloud Security Engineer</p>
-      <a href="#about" class="btn">Explore More</a>
-    </div>
+  <!-- HERO SECTION WITH BACKGROUND VIDEO -->
+<section id="home" class="hero">
 
-    <div class="hero-right">
-      <img src="../images/future.jpg" alt="Bhabishya Regmi" class="hero-img">
-    </div>
-  </section>
+  <!-- Background Video -->
+  <video autoplay muted loop playsinline>
+    <source src="../images/hacker.mp4" type="video/mp4">
+  </video>
+
+  <div class="hero-left">
+    <h1>Hello, I'm <span class="highlight">Bhabishya Regmi</span></h1>
+    <p>Footballer • Cybersecurity Student • Future Cloud Security Engineer</p>
+    <a href="#about" class="btn">Explore More</a>
+  </div>
+
+  <div class="hero-right">
+    <img src="../images/future.jpg" alt="Bhabishya Regmi" class="hero-img">
+  </div>
+
+</section>
 
   <!-- ABOUT -->
   <section id="about" class="section">
