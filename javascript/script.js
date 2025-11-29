@@ -1,34 +1,51 @@
-const form = document.getElementById("contactForm");
-const successMessage = document.getElementById("successMessage");
+// ==================== MOBILE MENU TOGGLE ====================
+const menuButton = document.getElementById('menu-button');
+const navLinks = document.querySelector('.nav-links');
 
-form.addEventListener("submit", function (e) {
-  e.preventDefault();
+menuButton.addEventListener('click', () => {
+  const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
+  
+  // Toggle menu open/close
+  navLinks.classList.toggle('open');
+  menuButton.classList.toggle('open');
+  
+  // Update ARIA attribute for accessibility
+  menuButton.setAttribute('aria-expanded', !isExpanded);
+});
 
-  // Get all form fields
-  const inputs = form.querySelectorAll("input, textarea");
-  let empty = false;
+// Close mobile menu when clicking a link
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    if (navLinks.classList.contains('open')) {
+      navLinks.classList.remove('open');
+      menuButton.classList.remove('open');
+      menuButton.setAttribute('aria-expanded', 'false');
+    }
+  });
+});
 
-  // Check empty fields
+// ==================== CONTACT FORM SUBMISSION ====================
+const contactForm = document.getElementById('contactForm');
+
+contactForm.addEventListener('submit', function(e) {
+  e.preventDefault(); // Prevent actual form submission
+
+  // Get all input fields
+  const inputs = contactForm.querySelectorAll('input, textarea');
+  let allFilled = true;
+
+  // Check if any field is empty
   inputs.forEach(input => {
-    if (input.value.trim() === "") {
-      empty = true;
+    if (input.value.trim() === '') {
+      allFilled = false;
     }
   });
 
-  // If empty → show alert
-  if (empty) {
-    alert("Please fill out all fields!");
-    return;
+  // Show appropriate alert
+  if (allFilled) {
+    alert("Form submitted successfully!");
+    contactForm.reset(); // Clear the form
+  } else {
+    alert("Please fill out all fields before submitting.");
   }
-
-  // Success alert
-  alert("Form submitted successfully!");
-
-  // Show success message
-  successMessage.style.display = "block";
-
-  // Reload after 4.8 sec
-  setTimeout(() => {
-    location.reload();
-  }, 4800);
 });

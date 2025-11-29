@@ -1,163 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Bhabishya Regmi | Portfolio</title>
-
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   <link rel="stylesheet" href="../css/style2.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="icon" type="image/png" href="../images/futurefavicon.png">
 </head>
-
 <body>
-  <!-- NAVBAR -->
-  <nav class="navbar">
-    <div class="nav-inner">
+
+  <!-- HERO SECTION WITH VIDEO BACKGROUND -->
+  <header id="hero" class="hero">
+    <video autoplay muted loop playsinline id="video-background">
+      <source src="../images/hacker.mp4" type="video/mp4"/>
+      Your browser does not support video.
+    </video>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="logo">Bhabishya</div>
       <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#education">Education</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
+      <button class="menu-toggle" id="menu-button" aria-expanded="false" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <!-- HERO CONTENT -->
+    <div class="hero-content">
+      <h1>Hello, I'm <span class="highlight">Bhabishya Regmi</span></h1>
+      <p>Footballer • Cybersecurity Student • Future Cloud Security Engineer</p>
+      <a href="#about" class="btn">Explore More</a>
     </div>
-  </nav>
-
-  <!-- HERO SECTION -->
-  <!-- HERO SECTION WITH BACKGROUND VIDEO -->
-<section id="home" class="hero">
-
-  <!-- Background Video -->
-  <video autoplay muted loop playsinline>
-    <source src="../images/hacker.mp4" type="video/mp4">
-  </video>
-
-  <div class="hero-left">
-    <h1>Hello, I'm <span class="highlight">Bhabishya Regmi</span></h1>
-    <p>Footballer • Cybersecurity Student • Future Cloud Security Engineer</p>
-    <a href="#about" class="btn">Explore More</a>
-  </div>
-
-  <div class="hero-right">
-    <img src="../images/future.jpg" alt="Bhabishya Regmi" class="hero-img">
-  </div>
-
-</section>
+  </header>
 
   <!-- ABOUT -->
   <section id="about" class="section">
-    <h2 class="section-title">About Me</h2>
-    <p class="about-text">
-      Versatile and accomplished professional with expertise in Microsoft Office and multiple programming languages, 
-      demonstrating a proven track record in full-stack project development. Skilled in PHP, Linux environments, 
-      and modern web technologies, with strong capabilities in penetration testing and cybersecurity practices.
-    </p>
+    <h2>About Me</h2>
+
+    <p>Versatile and accomplished professional with expertise in Microsoft Office and multiple programming languages. Skilled in PHP, Linux environments, modern web technologies, penetration testing, and cybersecurity practices.</p>
   </section>
 
   <!-- EDUCATION -->
   <section id="education" class="section">
-    <h2 class="section-title">Education</h2>
-
+    <h2>Education</h2>
     <div class="edu-table-wrapper">
       <table class="edu-table">
-        <tr>
-          <th>Institution</th>
-          <th>Degree</th>
-          <th>Board</th>
-          <th>Grade</th>
-          <th>Year</th>
-        </tr>
-
-        <tr>
-          <td>Herald College, Naxal, Kathmandu</td>
-          <td>BSc (Hons) Cyber Security</td>
-          <td>Bachelors</td>
-          <td>Running</td>
-          <td>2025–2028</td>
-        </tr>
-
-        <tr>
-          <td>Trinity International Secondary School, Kathmandu</td>
-          <td>Intermediate in Science</td>
-          <td>NEB</td>
-          <td>A</td>
-          <td>2021–2023</td>
-        </tr>
-
-        <tr>
-          <td>The Old Capital Secondary School, Gorkha</td>
-          <td>Secondary Education</td>
-          <td>PABSON</td>
-          <td>A</td>
-          <td>2020</td>
-        </tr>
+        <tr><th>Institution</th><th>Degree</th><th>Year</th></tr>
+        <tr><td>Herald College, Kathmandu</td><td>BSc (Hons) Cyber Security</td><td>2025–2028</td></tr>
+        <tr><td>Trinity International</td><td>Intermediate in Science</td><td>2021–2023</td></tr>
+        <tr><td>The Old Capital School</td><td>Secondary Education</td><td>2020</td></tr>
       </table>
     </div>
   </section>
 
-  <!-- PROJECTS -->
+  <!-- PROJECTS - USING CSS GRID -->
   <section id="projects" class="section">
-    <h2 class="section-title">My Projects</h2>
-
-    <div class="project-grid">
+    <h2>My Projects</h2>
+    <div class="projects-grid">
       <div class="project-card">
         <h3>Real-Time Weather App</h3>
-        <p>A dynamic weather app built with HTML, CSS, JS, PHP, and MySQL.</p>
-        <a href="#" target="_blank">View Project</a>
+        <p>Dynamic weather app built with HTML, CSS, JS, PHP & MySQL.</p>
+        <a href="#">View Project →</a>
       </div>
-
       <div class="project-card">
-        <h3>Encryption & Decryption Tool</h3>
-        <p>Encrypt and decrypt using Caesar Cipher with Python.</p>
-        <a href="#" target="_blank">View Project</a>
+        <h3>Encryption Tool</h3>
+        <p>Caesar Cipher encryption/decryption using Python.</p>
+        <a href="#">View Project →</a>
+      </div>
+      <div class="project-card">
+        <h3>Portfolio Website</h3>
+        <p>Responsive portfolio with video background & mobile menu.</p>
+        <a href="#">You're viewing it!</a>
       </div>
     </div>
   </section>
 
   <!-- CONTACT -->
-  <section id="contact" class="section">
-    <h2 class="section-title">Contact</h2>
-
-    <!-- CONTACT FORM -->
-    <form id="contactForm" class="contact-form">
-
-      <div class="form-group">
-        <label>First Name</label>
-        <input type="text" required>
-      </div>
-
-      <div class="form-group">
-        <label>Last Name</label>
-        <input type="text" required>
-      </div>
-
-      <div class="form-group">
-        <label>Mobile Number</label>
-        <input type="number" required>
-      </div>
-
-      <div class="form-group">
-        <label>Email Address</label>
-        <input type="email" required>
-      </div>
-
-      <div class="form-group full-width">
-        <label>Your Queries</label>
-        <textarea rows="4" required></textarea>
-      </div>
-
-      <button type="submit" class="btn submit-btn">Submit</button>
-    </form>
-
-    <!-- SUCCESS MESSAGE -->
-    <div id="successMessage" class="success-message" style="display:none;">
-      Your form has been submitted successfully!
+  <!-- CONTACT -->
+<section id="contact" class="section">
+  <h2>Contact</h2>
+  <form id="contactForm" class="contact-form">
+    <div class="form-group">
+      <label>First Name</label>
+      <input type="text" required>
     </div>
-  </section>
-
-  <!-- SOCIAL LINKS -->
+    <div class="form-group">
+      <label>Last Name</label>
+      <input type="text" required>
+    </div>
+    <div class="form-group">
+      <label>Mobile Number</label>
+      <input type="number" required>
+    </div>
+    <div class="form-group">
+      <label>Email Address</label>
+      <input type="email" required>
+    </div>
+    <div class="form-group full-width">
+      <label>Your Queries</label>
+      <textarea rows="5" required></textarea>
+    </div>
+    <button type="submit" class="btn">Submit</button>
+  </form>
+</section>
+<!-- SOCIAL -->
   <section id="social">
     <div class="social-icons">
       <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
@@ -168,12 +121,11 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="footer">
-    <p>&copy; 2025 Bhabishya Regmi | All Rights Reserved</p>
+  <footer>
+    <footer class="footer">
+    <p>© 2025 Bhabishya Regmi. All Rights Reserved.</p>
   </footer>
 
-  <!-- SCRIPT -->
-  <script src="../js/script.js"></script>
-
+  <script src="../javascript/script.js"></script>
 </body>
 </html>
