@@ -9,11 +9,19 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="icon" type="image/png" href="../images/futurefavicon.png">
-
 </head>
 
 <body>
-  <script src="../js/script.js"></script>
+  <!-- video -->
+
+ <section id="video" class="video-section">
+  <h2>My Video</h2>
+  <video controls class="my-video">
+    <source src="../images/hacker.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</section>
+
 
   <!-- NAVBAR -->
   <nav class="navbar">
@@ -28,7 +36,7 @@
     </div>
   </nav>
 
-  <!-- HERO -->
+  <!-- HERO SECTION -->
   <section id="home" class="hero">
     <div class="hero-left">
       <h1>Hello, I'm <span class="highlight">Bhabishya Regmi</span></h1>
@@ -97,7 +105,6 @@
     <h2 class="section-title">My Projects</h2>
 
     <div class="project-grid">
-
       <div class="project-card">
         <h3>Real-Time Weather App</h3>
         <p>A dynamic weather app built with HTML, CSS, JS, PHP, and MySQL.</p>
@@ -109,7 +116,6 @@
         <p>Encrypt and decrypt using Caesar Cipher with Python.</p>
         <a href="#" target="_blank">View Project</a>
       </div>
-
     </div>
   </section>
 
@@ -117,7 +123,9 @@
   <section id="contact" class="section">
     <h2 class="section-title">Contact</h2>
 
-    <form class="contact-form" id="contactForm">
+    <!-- CONTACT FORM -->
+    <form id="contactForm" class="contact-form">
+
       <div class="form-group">
         <label>First Name</label>
         <input type="text" required>
@@ -146,12 +154,13 @@
       <button type="submit" class="btn submit-btn">Submit</button>
     </form>
 
-    <div id="successMessage" class="success-message">
+    <!-- SUCCESS MESSAGE -->
+    <div id="successMessage" class="success-message" style="display:none;">
       Your form has been submitted successfully!
     </div>
   </section>
 
-  <!-- SOCIAL -->
+  <!-- SOCIAL LINKS -->
   <section id="social">
     <div class="social-icons">
       <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
@@ -165,6 +174,9 @@
   <footer class="footer">
     <p>&copy; 2025 Bhabishya Regmi | All Rights Reserved</p>
   </footer>
+
+  <!-- SCRIPT -->
+  <script src="../js/script.js"></script>
 
 </body>
 </html>
