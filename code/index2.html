@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Bhabishya Regmi | Portfolio</title>
+  <title>Bhabishya Regmi | Cybersecurity Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-  <link rel="stylesheet" href="../css/style2.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="../css/style2.css"/>
   <link rel="icon" type="image/png" href="../images/futurefavicon.png">
 </head>
 <body>
 
-  <!-- HERO SECTION WITH VIDEO BACKGROUND -->
-  <header id="hero" class="hero">
+  <!-- HERO WITH VIDEO BACKGROUND -->
+  <header id="hero">
     <video autoplay muted loop playsinline id="video-background">
       <source src="../images/hacker.mp4" type="video/mp4"/>
       Your browser does not support video.
@@ -20,19 +20,24 @@
 
     <!-- NAVBAR -->
     <nav class="navbar">
-      <div class="logo">Bhabishya</div>
+      <div class="logo">Future</div>
+
+      <!-- HAMBURGER BUTTON -->
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <button class="menu-toggle" id="menu-button" aria-expanded="false" aria-label="Toggle navigation">
-        <span></span><span></span><span></span>
-      </button>
     </nav>
 
-    <!-- HERO CONTENT -->
     <div class="hero-content">
       <h1>Hello, I'm <span class="highlight">Bhabishya Regmi</span></h1>
       <p>Footballer • Cybersecurity Student • Future Cloud Security Engineer</p>
@@ -43,74 +48,134 @@
   <!-- ABOUT -->
   <section id="about" class="section">
     <h2>About Me</h2>
-
-    <p>Versatile and accomplished professional with expertise in Microsoft Office and multiple programming languages. Skilled in PHP, Linux environments, modern web technologies, penetration testing, and cybersecurity practices.</p>
+    <p>Versatile and accomplished professional with expertise in Microsoft Office and multiple programming languages, demonstrating a proven track record in full-stack project development. Skilled in PHP, Linux environments, and modern web technologies, with strong capabilities in penetration testing and cybersecurity practices. Excels in content creation, web design, and software development, combining technical depth with creative problem-solving. Adept in leadership through active participation in football tournaments and a strong commitment to social service.</p>
   </section>
 
   <!-- EDUCATION -->
   <section id="education" class="section">
-    <h2>Education</h2>
+    <h2 class="section-title">Education</h2>
+
     <div class="edu-table-wrapper">
       <table class="edu-table">
-        <tr><th>Institution</th><th>Degree</th><th>Year</th></tr>
-        <tr><td>Herald College, Kathmandu</td><td>BSc (Hons) Cyber Security</td><td>2025–2028</td></tr>
-        <tr><td>Trinity International</td><td>Intermediate in Science</td><td>2021–2023</td></tr>
-        <tr><td>The Old Capital School</td><td>Secondary Education</td><td>2020</td></tr>
+        <tr>
+          <th>Institution</th>
+          <th>Degree</th>
+          <th>Board</th>
+          <th>Grade</th>
+          <th>Year</th>
+        </tr>
+
+        <tr>
+          <td>Herald College, Naxal, Kathmandu</td>
+          <td>BSc (Hons) Cyber Security</td>
+          <td>Bachelors</td>
+          <td>Running</td>
+          <td>2025–2028</td>
+        </tr>
+
+        <tr>
+          <td>Trinity International Secondary School, Kathmandu</td>
+          <td>Intermediate in Science</td>
+          <td>NEB</td>
+          <td>A</td>
+          <td>2021–2023</td>
+        </tr>
+
+        <tr>
+          <td>The Old Capital Secondary School, Gorkha</td>
+          <td>Secondary Education</td>
+          <td>PABSON</td>
+          <td>A</td>
+          <td>2020</td>
+        </tr>
       </table>
     </div>
   </section>
 
-  <!-- PROJECTS - USING CSS GRID -->
+<!--Skills-->
+<section id="skills" class="section">
+  <h2>My Skills</h2>
+  <div class="skills-grid">
+    <div class="skill-item">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" />
+      <p>HTML5</p>
+    </div>
+    <div class="skill-item">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" />
+      <p>CSS3</p>
+    </div>
+    <div class="skill-item">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" />
+      <p>JavaScript</p>
+    </div>
+    <div class="skill-item">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" />
+      <p>PHP</p>
+    </div>
+    <div class="skill-item">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" />
+      <p>MySQL</p>
+    </div>
+    <div class="skill-item">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" />
+      <p>Linux</p>
+    </div>
+    <div class="skill-item">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />
+      <p>Python</p>
+    </div>
+    <div class="skill-item">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" />
+      <p>Git</p>
+    </div>
+  </div>
+</section>
+  <!-- PROJECTS -->
   <section id="projects" class="section">
     <h2>My Projects</h2>
     <div class="projects-grid">
       <div class="project-card">
         <h3>Real-Time Weather App</h3>
-        <p>Dynamic weather app built with HTML, CSS, JS, PHP & MySQL.</p>
-        <a href="#">View Project →</a>
+        <p>Dynamic weather app using HTML, CSS, JS, PHP & MySQL.</p>
+        <a href="#">View Project</a>
       </div>
       <div class="project-card">
         <h3>Encryption Tool</h3>
-        <p>Caesar Cipher encryption/decryption using Python.</p>
-        <a href="#">View Project →</a>
-      </div>
-      <div class="project-card">
-        <h3>Portfolio Website</h3>
-        <p>Responsive portfolio with video background & mobile menu.</p>
-        <a href="#">You're viewing it!</a>
+        <p>Caesar Cipher encryption/decryption in Python.</p>
+        <a href="#">View Project</a>
       </div>
     </div>
   </section>
 
   <!-- CONTACT -->
-  <!-- CONTACT -->
-<section id="contact" class="section">
-  <h2>Contact</h2>
-  <form id="contactForm" class="contact-form">
-    <div class="form-group">
-      <label>First Name</label>
-      <input type="text" required>
-    </div>
-    <div class="form-group">
-      <label>Last Name</label>
-      <input type="text" required>
-    </div>
-    <div class="form-group">
-      <label>Mobile Number</label>
-      <input type="number" required>
-    </div>
-    <div class="form-group">
-      <label>Email Address</label>
-      <input type="email" required>
-    </div>
-    <div class="form-group full-width">
-      <label>Your Queries</label>
-      <textarea rows="5" required></textarea>
-    </div>
-    <button type="submit" class="btn">Submit</button>
-  </form>
-</section>
-<!-- SOCIAL -->
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <form id="contactForm" class="contact-form">
+      <div class="form-group">
+        <label>First Name</label>
+        <input type="text" required>
+      </div>
+      <div class="form-group">
+        <label>Last Name</label>
+        <input type="text" required>
+      </div>
+      <div class="form-group">
+        <label>Mobile Number</label>
+        <input type="tel" required>
+      </div>
+      <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" required>
+      </div>
+      <div class="form-group full-width">
+        <label>Your Queries</label>
+        <textarea rows="5" required></textarea>
+      </div>
+      <button type="submit" class="btn">Submit</button>
+    </form>
+  </section>
+
+   <!-- SOCIAL -->
   <section id="social">
     <div class="social-icons">
       <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
@@ -121,11 +186,12 @@
   </section>
 
   <!-- FOOTER -->
-  <footer>
-    <footer class="footer">
-    <p>© 2025 Bhabishya Regmi. All Rights Reserved.</p>
+  <footer class="footer">
+    <p>&copy; 2025 Bhabishya Regmi | All Rights Reserved</p>
   </footer>
 
+
   <script src="../javascript/script.js"></script>
+
 </body>
 </html>

@@ -1,50 +1,33 @@
-// ==================== MOBILE MENU TOGGLE ====================
-const menuButton = document.getElementById('menu-button');
+// Mobile Menu Toggle
+const menuToggle = document.getElementById('menu-toggle');
 const navLinks = document.querySelector('.nav-links');
 
-menuButton.addEventListener('click', () => {
-  const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
-  
-  // Toggle menu open/close
+menuToggle.addEventListener('click', () => {
   navLinks.classList.toggle('open');
-  menuButton.classList.toggle('open');
-  
-  // Update ARIA attribute for accessibility
-  menuButton.setAttribute('aria-expanded', !isExpanded);
+  menuToggle.classList.toggle('open');
+  const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+  menuToggle.setAttribute('aria-expanded', !expanded);
 });
 
-// Close mobile menu when clicking a link
+// Close menu when clicking a link
 document.querySelectorAll('.nav-links a').forEach(link => {
   link.addEventListener('click', () => {
-    if (navLinks.classList.contains('open')) {
-      navLinks.classList.remove('open');
-      menuButton.classList.remove('open');
-      menuButton.setAttribute('aria-expanded', 'false');
-    }
+    navLinks.classList.remove('open');
+    menuToggle.classList.remove('open');
+    menuToggle.setAttribute('aria-expanded', 'false');
   });
 });
 
-// ==================== CONTACT FORM SUBMISSION ====================
-const contactForm = document.getElementById('contactForm');
+// Form Validation + Alert
+document.getElementById('contactForm').addEventListener('submit', e => {
+  e.preventDefault();
+  const inputs = e.target.querySelectorAll('input, textarea');
+  let filled = true;
+  inputs.forEach(input => { if (!input.value.trim()) filled = false; });
 
-contactForm.addEventListener('submit', function(e) {
-  e.preventDefault(); // Prevent actual form submission
-
-  // Get all input fields
-  const inputs = contactForm.querySelectorAll('input, textarea');
-  let allFilled = true;
-
-  // Check if any field is empty
-  inputs.forEach(input => {
-    if (input.value.trim() === '') {
-      allFilled = false;
-    }
-  });
-
-  // Show appropriate alert
-  if (allFilled) {
+  if (filled) {
     alert("Form submitted successfully!");
-    contactForm.reset(); // Clear the form
+    e.target.reset();
   } else {
     alert("Please fill out all fields before submitting.");
   }
